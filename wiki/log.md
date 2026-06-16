@@ -513,3 +513,14 @@ append-only。新しいエントリは末尾に追記する。`grep "^## \[" log
   - 回答の骨＝「レイヤーが違う」：OpenClaw＝立てて話しかける自己ホスト型ゲートウェイ製品／Claude Code＝コーディング CLI（ACP で内包可）／LangGraph＝構築フレームワーク／Strands＝AWS の構築 SDK。比較表（4 主体 × 11 観点）＋補完関係＋選択ガイド。
   - **出典の透明性**：OpenClaw 側は全主張に wiki 引用。外部 3 者は wiki 外＝一般知識（カットオフ 2026-01）に基づく旨を明示し、Strands は WebSearch で軽く裏取り（AWS OSS・model-driven・Bedrock/Anthropic/OpenAI 対応・可観測性標準を確認）。
   - concept/overview 本文は不変（query は読むだけ）。新規 dangling ゼロ（後続の検証で確認）。
+
+## [2026-06-16] query | OpenClaw のメリット・デメリット・固有性
+
+- 問い: 一般的な OpenClaw 利用のメリット・デメリットと「OpenClaw でしかできないこと」。
+- 作成: [[openclaw-pros-cons-unique]]（`wiki/questions/`。前ターンでインラインに回答した内容を、ユーザー依頼によりページ化）。
+- 参照: [[overview]], [[concepts/architecture]], [[concepts/security]], [[concepts/channel-routing]], [[concepts/automation]], [[concepts/memory]], [[concepts/model-providers]], [[concepts/agent-runtimes]], [[concepts/acp]], [[concepts/sandboxing]], [[concepts/exec]], [[concepts/threat-model]], [[concepts/local-models]], [[components/node]], [[components/browser]] ほか。前ページ [[openclaw-vs-agent-frameworks]] と相互リンク。
+- 更新: [[index]]（Questions に 1 行）。
+- メモ:
+  - デメリットは OpenClaw が ⚠️ で明記する限界を lint 前の grep で裏取り（自己ホスト運用責任／1 Gateway=1 信頼境界＝非マルチテナント／サンドボックスは完全境界でない／exec は読み取り専用化不可／プロンプトインジェクション検出のみ P0／サプライチェーン・サードパーティ Skill／ローカルモデルはフィルタ非通過／ブラウザー＝オペレーター相当／常時稼働のトークンコスト／オプトイン設定の学習コスト／形式検証はモデル）。
+  - 「でしかできない」は“統合の固有性”として正直に枠付け（ACP で Claude Code をメッセージング越しに内包・ノードの身体性・1 ゲートウェイで多チャネル所有・自己ホスト常時稼働＋可読メモリ）。
+  - 外部比較の一般論（エコシステム規模）は wiki 外の見立てと明示。concept 本文は不変（query は読むだけ）。

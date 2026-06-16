@@ -365,6 +365,7 @@
   - [[lecture-architecture-04-why-not-dangerous]] — なぜ『危険』ではないのか（安全 4 柱）
   - [[lecture-architecture-05-faq]] — よくある誤解 Q&A
 - [[openclaw-vs-agent-frameworks]] — OpenClaw の強み・ユースケースと Claude Code / LangGraph / Strands Agents との比較（レイヤーの違い＋比較表）
+- [[openclaw-pros-cons-unique]] — OpenClaw のメリット・デメリット（自身が明記する限界）と「OpenClaw でしかできないこと」
 
 ---
 

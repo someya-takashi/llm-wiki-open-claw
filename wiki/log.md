@@ -487,3 +487,29 @@ append-only。新しいエントリは末尾に追記する。`grep "^## \[" log
   - 最強の対応：進捗ファイル＋git 履歴の橋渡し↔[[concepts/agent-workspace]]（private git バックアップ推奨）＋[[concepts/memory]]。離散セッション↔[[concepts/session]]。「Compaction だけでは不十分」↔[[concepts/compaction]] の限界。Future work の専門エージェント↔[[concepts/multi-agent]]。
   - **粒度の注意を要約に明記**：(1) 記事の initializer/coding は脚注いわく同一ハーネス・初期プロンプト違いで厳密にはマルチエージェントでない。(2) 記事の「テスト/自己検証」は [[concepts/exec]]/[[concepts/media-understanding]]/MCP に対応し、OpenClaw の [[concepts/qa-automation]]（メンテナー向け OpenClaw 自身の QA）とは別物なので qa-automation には cite せず本文で区別。(3) 記事の「進捗ファイル」は永続ノート＝memory/agent-workspace であり、[[concepts/progress-drafts]]（ストリーミング UX）とは別物なので cite せず。
   - 英語記事のため翻訳あり。コードフェンス 4（=2 ブロック）・表 1・図 1（GIF、ローカル保存せず参照のみ）。author は Justin Young（プレーン文字列・人物 wikilink なし）。原典 immutable・移送なし。
+
+## [2026-06-16] ingest | ブラウザー制御（tools/browser-* 4 ページ）＋ components/browser 起こし
+
+- 取り込み:
+  - `raw/docs/tools/browser-control.md`（元: https://docs.openclaw.ai/ja-JP/tools/browser-control ）
+  - `raw/docs/tools/browser-login.md`（元: https://docs.openclaw.ai/ja-JP/tools/browser-login ）
+  - `raw/docs/tools/browser-linux-troubleshooting.md`（元: https://docs.openclaw.ai/ja-JP/tools/browser-linux-troubleshooting ）
+  - `raw/docs/tools/browser-wsl2-windows-remote-cdp-troubleshooting.md`（元: https://docs.openclaw.ai/ja-JP/tools/browser-wsl2-windows-remote-cdp-troubleshooting ）
+- 作成: [[components/browser]]（新規ランドマーク構成要素）、[[sources/tools/browser-control]]、[[sources/tools/browser-login]]、[[sources/tools/browser-linux-troubleshooting]]、[[sources/tools/browser-wsl2-windows-remote-cdp-troubleshooting]]。
+- 更新: [[sources/tools/browser]]（frontmatter related に components/browser 追加・位置づけ/関連にハブとサブページ）、[[concepts/session-tool]]（関連に components/browser を逆リンク＝「読む web-search／操作する browser」）、[[overview]]（構成要素一覧に Browser・現状にブラウザー制御群）、[[index]]（Components に browser・Sources/tools に 4 ページ）。
+- メモ:
+  - **構成要素昇格の判断**：ブラウザー制御は loopback 制御サービス＋`browser` Plugin＋CLI＋HTTP API を持つ具体サブシステムで、docs が browser＋4 サブページの計 5 ページに達した。CLAUDE.md §1「言及が増えたら独立させる」に従い [[sources/tools/browser]]（既存）をハブから外し、新規 [[components/browser]] を俯瞰ハブに据えた（source 5 本は components/browser に集約）。
+  - 5 信頼境界の観点：ブラウザー制御は SSRF 防御（[[sources/security/network-proxy]]）・任意 JS（`evaluateEnabled`）・ログイン済みセッション機密の面でオペレーターアクセス相当（[[concepts/security]]/[[concepts/threat-model]]）。要約・component 本文に明記。
+  - プロファイル 3 種（openclaw 隔離 / user=existing-session・Chrome MCP / リモート CDP）と、Linux の snap Chromium 問題・WSL2 分割ホストの階層別切り分けが実務の肝。
+  - 移送: Clippings/ の 4 ファイルを raw/docs/tools/ の各スラグへ移動・改名（docs URL ツリー再現）。
+
+## [2026-06-16] query | OpenClaw の強み・ユースケース・他エージェント比較
+
+- 問い: OpenClaw の優れた点・ユースケースと、Claude Code / LangGraph で構築したエージェント / Strands Agents との比較。
+- 作成: [[openclaw-vs-agent-frameworks]]（`wiki/questions/`）。
+- 参照: [[overview]], [[concepts/architecture]], [[concepts/security]], [[concepts/channel-routing]], [[concepts/model-providers]], [[concepts/agent-runtimes]], [[concepts/acp]], [[concepts/memory]], [[concepts/automation]], [[concepts/multi-agent]], [[components/node]], [[components/plugin-system]] ほか。
+- 更新: [[index]]（Questions に 1 行）。
+- メモ:
+  - 回答の骨＝「レイヤーが違う」：OpenClaw＝立てて話しかける自己ホスト型ゲートウェイ製品／Claude Code＝コーディング CLI（ACP で内包可）／LangGraph＝構築フレームワーク／Strands＝AWS の構築 SDK。比較表（4 主体 × 11 観点）＋補完関係＋選択ガイド。
+  - **出典の透明性**：OpenClaw 側は全主張に wiki 引用。外部 3 者は wiki 外＝一般知識（カットオフ 2026-01）に基づく旨を明示し、Strands は WebSearch で軽く裏取り（AWS OSS・model-driven・Bedrock/Anthropic/OpenAI 対応・可観測性標準を確認）。
+  - concept/overview 本文は不変（query は読むだけ）。新規 dangling ゼロ（後続の検証で確認）。

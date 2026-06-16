@@ -32,4 +32,5 @@ updated: 2026-06-14
 
 - [[concepts/session]] / [[concepts/multi-agent]] / [[concepts/agent-loop]]
 - [[concepts/exec]] / [[concepts/skills]] / [[concepts/web-search]] / [[concepts/acp]]
+- [[components/browser]] — Web ページを実際に操作する `browser` ツール（[[concepts/web-search]] が「読む」なら browser は「操作する」）
 - [[sources/tools/tools]] / [[sources/tools/media-overview]] / [[sources/tools/subagents]]

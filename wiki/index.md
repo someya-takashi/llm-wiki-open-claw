@@ -119,6 +119,10 @@
 - [[sources/tools/skills-config]] — `skills.*` / `agents.*.skills` 設定スキーマ
 - [[sources/tools/slash-commands]] — `/...` コマンド・ディレクティブ・ネイティブ/テキスト・オーナー専用
 - [[sources/tools/browser]] — エージェント専用ブラウザー（Chrome/CDP・openclaw/user プロファイル）
+- [[sources/tools/browser-control]] — ブラウザー制御 HTTP API・`openclaw browser` CLI・スナップショット/ref・デバッグ
+- [[sources/tools/browser-login]] — 手動ログイン推奨と X/Twitter フロー（サンドボックス × ホスト制御）
+- [[sources/tools/browser-linux-troubleshooting]] — Linux の CDP 起動失敗（snap Chromium 問題）
+- [[sources/tools/browser-wsl2-windows-remote-cdp-troubleshooting]] — WSL2 Gateway＋Windows Chrome のリモート CDP を階層別に切り分け
 - [[sources/tools/web]] — Web 検索の概要（web_search/x_search・12 プロバイダー・自動検出）
 - [[sources/tools/web-fetch]] — `web_fetch`（URL 取得・Readability・SSRF・Firecrawl フォールバック）
 - [[sources/tools/brave-search]] — Brave（構造化・llm-context・無料枠）
@@ -320,6 +324,7 @@
 - [[components/cli]] — `openclaw` コマンド群と対話的な端末 TUI（Gateway/ローカルモード）
 - [[components/plugin-system]] — 拡張機構（チャネル/プロバイダー/ツール/音声…をネイティブ/バンドルで追加）
 - [[components/clawhub]] — Plugin/Skill マーケットプレイス（公開・検索・モデレーション）
+- [[components/browser]] — エージェントが実ブラウザーを操作するサブシステム（制御サービス＋`browser` Plugin・CDP/Playwright・プロファイル）
 
 ## Channels
 
@@ -359,6 +364,7 @@
   - [[lecture-architecture-03-message-flow]] — 受信から返信までの流れ（シーケンス図）
   - [[lecture-architecture-04-why-not-dangerous]] — なぜ『危険』ではないのか（安全 4 柱）
   - [[lecture-architecture-05-faq]] — よくある誤解 Q&A
+- [[openclaw-vs-agent-frameworks]] — OpenClaw の強み・ユースケースと Claude Code / LangGraph / Strands Agents との比較（レイヤーの違い＋比較表）
 
 ---
 

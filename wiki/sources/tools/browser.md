@@ -8,6 +8,7 @@ title: "ブラウザー（OpenClaw 管理）"
 ingested: 2026-06-14
 tags: [browser, chrome, cdp, automation, profile, browserless, ssrf]
 related:
+  - "[[components/browser]]"
   - "[[concepts/session-tool]]"
   - "[[components/plugin-system]]"
   - "[[concepts/sandboxing]]"
@@ -23,7 +24,7 @@ related:
 
 ## 位置づけ
 
-[[concepts/session-tool]] のブラウザツールで、実体は同梱の `browser` Plugin（[[components/plugin-system]]、既定有効）。隔離と SSRF 防御は [[concepts/sandboxing]]・[[concepts/security]]、リモート制御は [[concepts/remote-access]] と関連。
+[[concepts/session-tool]] のブラウザツールで、実体は同梱の `browser` Plugin（[[components/plugin-system]]、既定有効）。隔離と SSRF 防御は [[concepts/sandboxing]]・[[concepts/security]]、リモート制御は [[concepts/remote-access]] と関連。サブシステム全体の俯瞰（プロファイル・3 サーフェス・セキュリティ・トラブルシュート）は [[components/browser]]、API/CLI リファレンスは [[sources/tools/browser-control]]。
 
 ## 仕組み・ふるまい
 
@@ -50,5 +51,7 @@ related:
 
 ## 関連ページ
 
+- [[components/browser]]（サブシステム俯瞰のハブ）
 - [[concepts/session-tool]] / [[components/plugin-system]] / [[concepts/sandboxing]]
 - [[concepts/security]] / [[concepts/threat-model]] / [[sources/security/network-proxy]] / [[sources/tools/media-overview]]
+- 関連サブページ：[[sources/tools/browser-control]]（API/CLI）/ [[sources/tools/browser-login]]（ログイン）/ [[sources/tools/browser-linux-troubleshooting]] / [[sources/tools/browser-wsl2-windows-remote-cdp-troubleshooting]]
